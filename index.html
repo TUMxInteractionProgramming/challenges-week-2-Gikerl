@@ -9,91 +9,8 @@
 
     <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
-    <!-- #2 #css #elements -->
-    <style>
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
-
-
-        /*styles for channel area*/
-
-        li {
-            background-color: white;
-            list-style-type: none;
-        }
-
-        h2 {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
-
-        a {
-            /* Link text color =  primary text color (black)*/
-            color: black;
-        }
-
-        .message {
-            /* Message box width = 80% of browser*/
-            width: 80%;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
 </head>
 
@@ -105,18 +22,18 @@
 
     <!-- #1 #channels #topics -->
     <ul>
-        <li>#Yummy<img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star" height="15"></li>
-        <li>#SevenContinents<img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star" height="15"></li>
-        <li>#KillerApp<img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star" height="15"></li>
-        <li>#FirstPersonOnMars<img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star" height="15"></li>
-        <li>#Octoberfest<img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star" height="15"></li>
+        <li>#Yummy<img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star"></li>
+        <li class="selected">#SevenContinents<img  src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star"></li>
+        <li>#KillerApp<img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star"></li>
+        <li>#FirstPersonOnMars<img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star"></li>
+        <li>#Octoberfest<img src="http://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star"></li>
     </ul>
 
     <!-- #1 #channels #buttons -->
-    <div style="background-color: white;">
-        <button><img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Lightbulb" height="12">new</button>
-        <button><img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Fire" height="12">trending</button>
-        <button><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star" height="12">favorites</button>
+    <div id="tab-bar" >
+        <button class="selected"><img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Lightbulb" height="24">new</button>
+        <button><img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Fire" height="24">trending</button>
+        <button><img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star" height="24">favorites</button>
     </div>
 
 
@@ -128,10 +45,11 @@
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong>cheeses.yard.applies</strong>
     </small>
+        <img  src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
     </h1>
 
     <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-    <div class="message">
+    <div class="message my-message">
         <h3>
             <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
             <strong><a href="https://map.what3words.com/cheeses.yard.applies" target="_blank">cheeses.yard.applies</a></strong> Wed, June 20th, 13:37
